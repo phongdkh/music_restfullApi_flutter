@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:music_restfulapi_flutter/models/catalog_model.dart';
+import 'package:music_restfulapi_flutter/network/response/music_response.dart';
 import 'package:music_restfulapi_flutter/service/api_service.dart';
 
 class MyHome extends StatelessWidget {
@@ -21,10 +21,10 @@ class MyHome extends StatelessWidget {
     final apiService =
         ApiService(Dio(BaseOptions(contentType: "application/json")));
     return FutureBuilder(
-        future: apiService.getCatalog(),
+        future: apiService.getMusic(),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.done) {
-            final List<CatalogModel> posts = snapshot.data!;
+            final List<MusicResponse> posts = snapshot.data!;
             return _posts(posts);
           } else {
             return const Center(
@@ -34,7 +34,7 @@ class MyHome extends StatelessWidget {
         });
   }
 
-  Widget _posts(List<CatalogModel> posts) {
+  Widget _posts(List<MusicResponse> posts) {
     return ListView.builder(
       itemCount: posts.length,
       itemBuilder: (context, index) {
@@ -49,11 +49,11 @@ class MyHome extends StatelessWidget {
           child: Column(
             children: [
               Text(
-                posts[index].id.toString(),
+                posts[index].musicEntity.id.toString(),
                 style: const TextStyle(fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 10),
-              Text(posts[index].title.toString())
+              Text(posts[index].musicEntity.title.toString())
             ],
           ),
         );

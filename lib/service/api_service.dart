@@ -1,22 +1,16 @@
+
 import 'package:dio/dio.dart';
-import 'package:music_restfulapi_flutter/models/catalog_model.dart';
-import 'package:music_restfulapi_flutter/models/post_model.dart';
-import 'package:retrofit/http.dart';
+import 'package:music_restfulapi_flutter/network/response/music_response.dart';
+import 'package:retrofit/retrofit.dart';
+
 
 part 'api_service.g.dart';
 
-// @RestApi(baseUrl: "https://jsonplaceholder.typicode.com/")
-// abstract class ApiService{
-//   factory ApiService(Dio dio) = _ApiService;
-//
-//   @GET("posts")
-//   Future<List<PostModel>> getPosts();
-// }
+@RestApi()
+abstract class ApiService {
+  factory ApiService(Dio dio, {String baseUrl}) = _ApiService;
 
-@RestApi(baseUrl: "https://storage.googleapis.com/uamp/")
-abstract class ApiService{
-  factory ApiService(Dio dio) = _ApiService;
+  @GET('catalog.json')//dường dẫn sever
+  Future<MusicResponse> getMusic();
 
-  @GET("catalog.json")
-  Future<List<CatalogModel>> getCatalog();
 }
