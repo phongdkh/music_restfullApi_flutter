@@ -12,9 +12,7 @@ class _ApiService implements ApiService {
   _ApiService(
     this._dio, {
     this.baseUrl,
-  }) {
-    baseUrl ??= 'https://storage.googleapis.com/uamp/';
-  }
+  });
 
   final Dio _dio;
 
@@ -34,7 +32,7 @@ class _ApiService implements ApiService {
     )
             .compose(
               _dio.options,
-              'catalog.json',
+              '',
               queryParameters: queryParameters,
               data: _data,
             )
