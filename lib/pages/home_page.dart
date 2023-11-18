@@ -21,15 +21,15 @@ class _MyHomePageState extends State<MyHomePage> with MixinBasePage<HomeVM> {
           appBar: AppBar(
             title: Text(widget.title),
           ),
-          body: ListView.builder(
-              itemCount: listDataMusic.length,
-              physics: const AlwaysScrollableScrollPhysics(),
-              shrinkWrap: true,
-              itemBuilder: (BuildContext context, int index) {
-                return ListTile(
-                  title: Text(listDataMusic[index].title ?? "error"),
-                );
-              }),
+          // body: ListView.builder(
+          //     itemCount: listDataMusic.length,
+          //     physics: const AlwaysScrollableScrollPhysics(),
+          //     shrinkWrap: true,
+          //     itemBuilder: (BuildContext context, int index) {
+          //       return ListTile(
+          //         title: Text(listDataMusic[index].title ?? "error"),
+          //       );
+          //     }),
         ));
   }
 
