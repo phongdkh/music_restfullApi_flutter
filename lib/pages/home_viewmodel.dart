@@ -18,9 +18,8 @@ class HomeVM extends BaseViewModel {
     showLoading();
     try {
       final response = await api.apiServices.getMusic();
-      //data = response;
-      listData.addAll(response?.music ?? []);
-      print(listData.length);
+      data = response;
+      listData.addAll(data?.music ?? []);
       notifyListeners();
       hideLoading();
     } on DioError catch (e) {
