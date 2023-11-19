@@ -13,7 +13,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> with MixinBasePage<HomeVM> {
-  List<MusicModel> listDataMusic = [];
 
   @override
   Widget build(BuildContext context) {
@@ -21,15 +20,16 @@ class _MyHomePageState extends State<MyHomePage> with MixinBasePage<HomeVM> {
           appBar: AppBar(
             title: Text(widget.title),
           ),
-          // body: ListView.builder(
-          //     itemCount: listDataMusic.length,
-          //     physics: const AlwaysScrollableScrollPhysics(),
-          //     shrinkWrap: true,
-          //     itemBuilder: (BuildContext context, int index) {
-          //       return ListTile(
-          //         title: Text(listDataMusic[index].title ?? "error"),
-          //       );
-          //     }),
+          body: ListView.builder(
+              itemCount: provider.listData.length,
+              physics: const AlwaysScrollableScrollPhysics(),
+              shrinkWrap: true,
+              itemBuilder: (BuildContext context, int index) {
+                return ListTile(
+                  title: Text(provider.listData[index].title ?? "error"),
+                  subtitle: Text(provider.listData[index].album ?? "error"),
+                );
+              }),
         ));
   }
 

@@ -7,29 +7,29 @@ part of 'music_model.dart';
 // **************************************************************************
 
 MusicModel _$MusicModelFromJson(Map<String, dynamic> json) => MusicModel()
-  ..id = json['Id'] as String?
-  ..title = json['Title'] as String?
-  ..album = json['Album'] as String?
-  ..artist = json['Artist'] as String?
-  ..genre = json['Genre'] as String?
-  ..source = json['Source'] as String?
-  ..image = json['Image'] as String?
-  ..trackNumber = json['TrackNumber'] as int?
-  ..totalTrackCount = json['TotalTrackCount'] as int?
-  ..duration = json['Duration'] as int?
-  ..site = json['Site'] as String?;
+  ..id = json['id'] as String?
+  ..title = json['title'] as String?
+  ..album = json['album'] as String?
+  ..artist = json['artist'] as String?
+  ..genre = json['genre'] as String?
+  ..source = json['source'] as String?
+  ..image = json['image'] as String?
+  ..trackNumber = json['trackNumber'] as int?
+  ..totalTrackCount = json['totalTrackCount'] as int?
+  ..duration = json['duration'] as int?
+  ..site = json['site'] as String?;
 
 Map<String, dynamic> _$MusicModelToJson(MusicModel instance) =>
     <String, dynamic>{
-      'Id': instance.id,
-      'Title': instance.title,
-      'Album': instance.album,
-      'Artist': instance.artist,
-      'Genre': instance.genre,
-      'Source': instance.source,
-      'Image': instance.image,
-      'TrackNumber': instance.trackNumber,
-      'TotalTrackCount': instance.totalTrackCount,
-      'Duration': instance.duration,
-      'Site': instance.site,
+      'id': instance.id,
+      'title': instance.title,
+      'album': instance.album,
+      'artist': instance.artist,
+      'genre': instance.genre,
+      'source': instance.source,
+      'image': instance.image,
+      'trackNumber': instance.trackNumber,
+      'totalTrackCount': instance.totalTrackCount,
+      'duration': instance.duration,
+      'site': instance.site,
     };

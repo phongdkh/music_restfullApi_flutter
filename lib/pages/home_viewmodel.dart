@@ -11,7 +11,6 @@ class HomeVM extends BaseViewModel {
 
   @override
   void onInit() {
-    print("HomeVM");
     fetchNewsAll();
   }
 
@@ -19,8 +18,9 @@ class HomeVM extends BaseViewModel {
     showLoading();
     try {
       final response = await api.apiServices.getMusic();
-      data = response;
-      listData.addAll(data?.dataList ?? []);
+      //data = response;
+      listData.addAll(response?.music ?? []);
+      print(listData.length);
       notifyListeners();
       hideLoading();
     } on DioError catch (e) {

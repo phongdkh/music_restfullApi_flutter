@@ -4,37 +4,37 @@ part 'music_model.g.dart';
 
 @JsonSerializable()
 class MusicModel {
-  @JsonKey(name: 'Id')
+  @JsonKey(name: 'id')
   String? id;
 
-  @JsonKey(name: 'Title')
+  @JsonKey(name: 'title')
   String? title;
 
-  @JsonKey(name: 'Album')
+  @JsonKey(name: 'album')
   String? album;
 
-  @JsonKey(name: 'Artist')
+  @JsonKey(name: 'artist')
   String? artist;
 
-  @JsonKey(name: 'Genre')
+  @JsonKey(name: 'genre')
   String? genre;
 
-  @JsonKey(name: 'Source')
+  @JsonKey(name: 'source')
   String? source;
 
-  @JsonKey(name: 'Image')
+  @JsonKey(name: 'image')
   String? image;
 
-  @JsonKey(name: 'TrackNumber')
+  @JsonKey(name: 'trackNumber')
   int? trackNumber;
 
-  @JsonKey(name: 'TotalTrackCount')
+  @JsonKey(name: 'totalTrackCount')
   int? totalTrackCount;
 
-  @JsonKey(name: 'Duration')
+  @JsonKey(name: 'duration')
   int? duration;
 
-  @JsonKey(name: 'Site')
+  @JsonKey(name: 'site')
   String? site;
 
   MusicModel();

@@ -8,7 +8,7 @@ part 'music_response.g.dart';
 @JsonSerializable()
 class MusicResponse extends BaseResponse {
   @JsonKey(name: 'music')
-  List<MusicModel>? dataList;
+  List<MusicModel>? music;
 
   MusicResponse();
 
