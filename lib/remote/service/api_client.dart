@@ -76,7 +76,7 @@ class ApiClient {
     );
 
     apiServices =
-        ApiService(dio, baseUrl: Constants.baseURL + Constants.versionAPI);
+        ApiService(dio, baseUrl: Constants.baseURL);
 
     // apiServices =
     //     ApiService(dio, baseUrl: 'https://storage.googleapis.com/uamp/');

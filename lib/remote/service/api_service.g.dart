@@ -32,7 +32,7 @@ class _ApiService implements ApiService {
     )
             .compose(
               _dio.options,
-              '',
+              'catalog.json',
               queryParameters: queryParameters,
               data: _data,
             )

@@ -10,7 +10,7 @@ part 'api_service.g.dart';
 abstract class ApiService {
   factory ApiService(Dio dio, {String baseUrl}) = _ApiService;
 
-  @GET('')//dường dẫn sever
+  @GET('catalog.json')//dường dẫn sever
   Future<MusicResponse> getMusic();
 
 }
